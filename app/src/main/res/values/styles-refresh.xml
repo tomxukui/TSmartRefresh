@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--刷新模式-->
+    <style name="Refresh">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <!--当刷新的时候内容不能动-->
+        <item name="srlDisableContentWhenRefresh">true</item>
+        <!--当加载的时候内容不能动-->
+        <item name="srlDisableContentWhenLoading">true</item>
+        <!--当刷新的时候头部刷新控件跟随移动-->
+        <item name="srlEnableHeaderTranslationContent">false</item>
+        <!--当加载的时候尾部刷新控件跟随移动-->
+        <item name="srlEnableFooterTranslationContent">true</item>
+        <!--关闭加载功能-->
+        <item name="srlEnableLoadMore">false</item>
+        <!--当页面未填满的时候自动触发加载-->
+        <item name="srlEnableLoadMoreWhenContentNotFull">true</item>
+        <!--打开自动加载功能-->
+        <item name="srlEnableAutoLoadMore">true</item>
+        <!--非纯浏览模式-->
+        <item name="srlEnablePureScrollMode">false</item>
+    </style>
+
+    <!--纯浏览模式-->
+    <style name="Browse">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="srlEnablePureScrollMode">true</item>
+    </style>
+
+</resources>

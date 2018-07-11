@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="KRefreshRecyclerView">
+        <attr name="android:orientation" />
+        <attr name="android:clipToPadding" />
+        <attr name="krrv_clipPaddingLeft" format="dimension" />
+        <attr name="krrv_clipPaddingTop" format="dimension" />
+        <attr name="krrv_clipPaddingRight" format="dimension" />
+        <attr name="krrv_clipPaddingBottom" format="dimension" />
+        <attr name="krrv_divider" format="reference" />
+        <attr name="krrv_noMoreText" format="string" />
+        <attr name="krrv_netErrorText" format="string" />
+        <attr name="krrv_netErrorIcon" format="reference" />
+        <attr name="krrv_emptyDataText" format="string" />
+        <attr name="krrv_emptyDataIcon" format="reference" />
+        <attr name="krrv_noMoreEnable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TattooView">
+        <attr name="tttv_noMoreText" format="string" />
+        <attr name="tttv_netErrorText" format="string" />
+        <attr name="tttv_netErrorIcon" format="reference" />
+        <attr name="tttv_emptyDataText" format="string" />
+        <attr name="tttv_emptyDataIcon" format="reference" />
+        <attr name="tttv_noMoreEnable" format="boolean" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+    </declare-styleable>
+
+</resources>
