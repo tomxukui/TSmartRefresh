@@ -66,8 +66,8 @@ public class KRefreshRecyclerView extends KRefreshLayout {
         mClipPaddingRight = 0;
         mClipPaddingBottom = 0;
         mDivider = 0;
-        mNetErrorIcon = R.mipmap.ic_no_wifi;
-        mEmptyDataIcon = R.mipmap.ic_record_no;
+        mNetErrorIcon = R.drawable.tsr_ic_failure;
+        mEmptyDataIcon = R.drawable.tsr_ic_empty;
         mNoMoreEnable = true;
 
         if (attrs != null) {

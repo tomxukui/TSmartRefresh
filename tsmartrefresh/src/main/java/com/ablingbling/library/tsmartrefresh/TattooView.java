@@ -6,13 +6,13 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.v7.widget.AppCompatImageView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -28,7 +28,7 @@ public class TattooView extends FrameLayout {
 
     private TextView tattoo_tv_noMore;
     private LinearLayout tattoo_linear_center;
-    private ImageView tattoo_iv_icon;
+    private AppCompatImageView tattoo_iv_icon;
     private TextView tattoo_tv_message;
     private KRefreshLayout mRefreshLayout;
 
@@ -81,10 +81,10 @@ public class TattooView extends FrameLayout {
         mIsNext = true;
         mIsNetError = false;
         mIsEmptyData = false;
-        mTextSize = DensityUtil.sp2px(14);
-        mTextColor = Color.parseColor("#7F888E");
-        mNetErrorIcon = R.mipmap.ic_no_wifi;
-        mEmptyDataIcon = R.mipmap.ic_record_no;
+        mTextSize = DensityUtil.sp2px(15);
+        mTextColor = Color.parseColor("#888888");
+        mNetErrorIcon = R.drawable.tsr_ic_failure;
+        mEmptyDataIcon = R.drawable.tsr_ic_empty;
         mNoMoreEnable = true;
 
         if (attrs != null) {
@@ -106,7 +106,7 @@ public class TattooView extends FrameLayout {
             mNoMoreText = "──  没有记录了  ──";
         }
         if (TextUtils.isEmpty(mNetErrorText)) {
-            mNetErrorText = "网络不给力, 点击屏幕刷新";
+            mNetErrorText = "数据请求失败, 点击屏幕刷新";
         }
         if (TextUtils.isEmpty(mEmptyDataText)) {
             mEmptyDataText = "暂无数据记录";
