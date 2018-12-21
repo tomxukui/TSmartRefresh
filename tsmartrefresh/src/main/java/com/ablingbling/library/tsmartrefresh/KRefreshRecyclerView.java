@@ -203,10 +203,10 @@ public class KRefreshRecyclerView extends KRefreshLayout {
 
     public void finishFailure(boolean isFirst) {
         finish();
-        setEnableLoadMore(true);
 
         if (isFirst) {
             setNewData(null);
+            setEnableLoadMore(false);
         }
 
         tattooView.setError();
