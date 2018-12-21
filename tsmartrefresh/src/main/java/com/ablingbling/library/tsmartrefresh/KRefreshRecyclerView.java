@@ -185,6 +185,11 @@ public class KRefreshRecyclerView extends KRefreshLayout {
 
         if (isFirst) {
             setNewData(list);
+
+            if (list != null && list.size() > 0) {
+                refreshRecycler_recyclerView.smoothScrollToPosition(0);
+            }
+
         } else {
             addData(list);
         }
@@ -196,8 +201,14 @@ public class KRefreshRecyclerView extends KRefreshLayout {
         finishSuccess(true, false, list);
     }
 
-    public void finishFailure() {
+    public void finishFailure(boolean isFirst) {
         finish();
+        setEnableLoadMore(true);
+
+        if (isFirst) {
+            setNewData(null);
+        }
+
         tattooView.setError();
     }
 
