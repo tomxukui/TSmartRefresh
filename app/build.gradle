@@ -7,8 +7,8 @@ android {
         applicationId "com.ablingbling.app.tsmartrefresh"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        versionCode 203
+        versionName "2.0.3"
     }
     buildTypes {
         release {
@@ -23,7 +23,7 @@ dependencies {
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["design"]
     implementation project(':tsmartrefresh')
-    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-11'
-    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-11'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-20'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.38'
 }

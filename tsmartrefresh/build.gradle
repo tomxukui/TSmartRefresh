@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        versionCode 203
+        versionName "2.0.3"
     }
 
     buildTypes {
@@ -26,6 +26,6 @@ dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly rootProject.ext.dependencies["appcompat-v7"]
     compileOnly rootProject.ext.dependencies["design"]
-    compileOnly 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-11'
+    compileOnly 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
     compileOnly 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.38'
 }
