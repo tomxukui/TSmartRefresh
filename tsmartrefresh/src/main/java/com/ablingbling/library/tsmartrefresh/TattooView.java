@@ -204,12 +204,7 @@ public class TattooView extends FrameLayout {
             headerHeight = mAdapter.getHeaderLayout().getHeight();
         }
 
-        int footerHeight = 0;
-        if (mAdapter.getFooterLayout() != null) {
-            footerHeight = mAdapter.getFooterLayout().getHeight() - getHeight();
-        }
-
-        int contentHeight = mRefreshLayout.getHeight() - mRefreshLayout.getPaddingTop() - mRefreshLayout.getPaddingBottom() - headerHeight - footerHeight;
+        int contentHeight = mRefreshLayout.getHeight() - mRefreshLayout.getPaddingTop() - mRefreshLayout.getPaddingBottom() - headerHeight;
         int viewHeight = tattoo_linear_center.getHeight();
         if (viewHeight == 0) {
             viewHeight = DensityUtil.dp2px(140) + DensityUtil.sp2px(mTextSize);
