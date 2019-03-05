@@ -21,6 +21,7 @@ public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadM
 
     private ListAdapter mRecyclerAdapter;
 
+    private LayoutInflater mInflater;
     private int mPageNumber = 1;
 
     @Override
@@ -28,6 +29,7 @@ public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadM
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_refresh);
 
+        mInflater = LayoutInflater.from(this);
         mRecyclerAdapter = new ListAdapter();
 
         refreshView = findViewById(R.id.refreshView);
@@ -35,11 +37,8 @@ public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadM
         refreshView.setOnRefreshLoadMoreListener(this);
         refreshView.setOnItemClickListener(this);
 
-        View headerView = LayoutInflater.from(this).inflate(R.layout.header_list_refresh, null);
+        View headerView = mInflater.inflate(R.layout.header_list_refresh, refreshView, false);
         refreshView.addHeaderView(headerView);
-
-        View footerView = LayoutInflater.from(this).inflate(R.layout.footer_list_refresh, null);
-        refreshView.addFooterView(footerView);
 
         refreshView.autoRefresh();
     }
