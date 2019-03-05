@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.ablingbling.library.tsmartrefresh.KRefreshRecyclerView;
@@ -18,6 +19,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadMoreListener, BaseQuickAdapter.OnItemClickListener {
 
     private KRefreshRecyclerView refreshView;
+    private Button btn_clear;
 
     private ListAdapter mRecyclerAdapter;
 
@@ -28,11 +30,24 @@ public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadM
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_refresh);
+        initData();
+        initView();
+        setView();
 
+        refreshView.autoRefresh();
+    }
+
+    private void initData() {
         mInflater = LayoutInflater.from(this);
         mRecyclerAdapter = new ListAdapter();
+    }
 
+    private void initView() {
         refreshView = findViewById(R.id.refreshView);
+        btn_clear = findViewById(R.id.btn_clear);
+    }
+
+    private void setView() {
         refreshView.setAdapter(mRecyclerAdapter);
         refreshView.setOnRefreshLoadMoreListener(this);
         refreshView.setOnItemClickListener(this);
@@ -40,7 +55,15 @@ public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadM
         View headerView = mInflater.inflate(R.layout.header_list_refresh, refreshView, false);
         refreshView.addHeaderView(headerView);
 
-        refreshView.autoRefresh();
+        btn_clear.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                mPageNumber = 1;
+                refreshView.finishSuccess(null);
+            }
+
+        });
     }
 
     @Override
