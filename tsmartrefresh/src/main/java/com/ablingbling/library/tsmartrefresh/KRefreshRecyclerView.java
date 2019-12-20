@@ -52,12 +52,6 @@ public class KRefreshRecyclerView extends KRefreshLayout {
         initView(context);
     }
 
-    public KRefreshRecyclerView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        initData(context, attrs, defStyleAttr);
-        initView(context);
-    }
-
     private void initData(Context context, AttributeSet attrs, int defStyleAttr) {
         mOrientation = OrientationHelper.VERTICAL;
         mClipToPadding = true;

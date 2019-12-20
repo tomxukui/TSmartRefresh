@@ -18,10 +18,6 @@ public class KRefreshLayout extends SmartRefreshLayout {
         super(context, attrs);
     }
 
-    public KRefreshLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
     public void finish() {
         finishRefresh(0);
         finishLoadMore(0);
