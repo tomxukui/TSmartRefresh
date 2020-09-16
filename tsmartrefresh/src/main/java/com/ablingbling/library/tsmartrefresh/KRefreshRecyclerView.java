@@ -2,24 +2,27 @@ package com.ablingbling.library.tsmartrefresh;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.DrawableRes;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.OrientationHelper;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.ablingbling.library.tsmartrefresh.decoration.DividerDecoration;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemChildClickListener;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.chad.library.adapter.base.listener.OnItemLongClickListener;
 
 import java.util.List;
+
+import androidx.annotation.DrawableRes;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.OrientationHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by xukui on 2018/3/22.
  */
-
 public class KRefreshRecyclerView extends KRefreshLayout {
 
     private RecyclerView refreshRecycler_recyclerView;
@@ -161,15 +164,15 @@ public class KRefreshRecyclerView extends KRefreshLayout {
         mAdapter.addFooterView(view);
     }
 
-    public void setOnItemClickListener(BaseQuickAdapter.OnItemClickListener listener) {
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mAdapter.setOnItemClickListener(listener);
     }
 
-    public void setOnItemLongClickListener(BaseQuickAdapter.OnItemLongClickListener listener) {
+    public void setOnItemLongClickListener(OnItemLongClickListener listener) {
         mAdapter.setOnItemLongClickListener(listener);
     }
 
-    public void setOnItemChildClickListener(BaseQuickAdapter.OnItemChildClickListener listener) {
+    public void setOnItemChildClickListener(OnItemChildClickListener listener) {
         mAdapter.setOnItemChildClickListener(listener);
     }
 

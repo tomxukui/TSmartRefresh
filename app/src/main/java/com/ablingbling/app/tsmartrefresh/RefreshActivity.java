@@ -1,8 +1,6 @@
 package com.ablingbling.app.tsmartrefresh;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -10,13 +8,17 @@ import android.widget.Toast;
 
 import com.ablingbling.library.tsmartrefresh.KRefreshRecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.scwang.smart.refresh.layout.api.RefreshLayout;
+import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by xukui on 2018/5/8.
  */
-public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadMoreListener, BaseQuickAdapter.OnItemClickListener {
+public class RefreshActivity extends AppCompatActivity implements OnRefreshLoadMoreListener, OnItemClickListener {
 
     private KRefreshRecyclerView refreshView;
     private Button btn_clear;

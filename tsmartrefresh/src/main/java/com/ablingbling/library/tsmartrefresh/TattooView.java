@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v7.widget.AppCompatImageView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -18,6 +15,10 @@ import android.widget.TextView;
 
 import com.ablingbling.library.tsmartrefresh.util.DensityUtil;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.AppCompatImageView;
 
 /**
  * Created by xukui on 2018/3/21.

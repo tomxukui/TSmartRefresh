@@ -5,27 +5,29 @@ group = 'com.github.tomxukui'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 204
-        versionName "2.0.4"
+        versionCode 205
+        versionName "2.0.5"
+
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
 }
 
 dependencies {
-    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-    compileOnly rootProject.ext.dependencies["appcompat-v7"]
-    compileOnly rootProject.ext.dependencies["design"]
-    compileOnly 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
-    compileOnly 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.38'
+    compileOnly rootProject.ext.dependencies["appcompat"]
+    compileOnly rootProject.ext.dependencies["material"]
+    compileOnly 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    compileOnly 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 }

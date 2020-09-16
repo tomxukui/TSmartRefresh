@@ -3,7 +3,7 @@ package com.ablingbling.library.tsmartrefresh;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 
 /**
  * Created by xukui on 2018/1/17.
